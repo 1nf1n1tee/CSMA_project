@@ -25,15 +25,15 @@ def receiver(person_send, person_rec, letter):
 if __name__ == "__main__":
     t1 = Thread(target=sender, args=("Alice", "Bob", "HELLO"))
     t2 = Thread(target=sender, args=("Charlie", "Dave", "WORLD"))
-    # t3 = Thread(target=sender, args=("Eve", "Frank", "PYTHON"))
-    # t4 = Thread(target=sender, args=("Grace", "Heidi", "THREADS"))
+    t3 = Thread(target=sender, args=("Eve", "Frank", "PYTHON"))
+    t4 = Thread(target=sender, args=("Grace", "Heidi", "THREADS"))
     
     t1.start()
     t2.start()
-    # t3.start()
-    # t4.start()
+    t3.start()
+    t4.start()
 
     t1.join()
     t2.join()
-    # t3.join()
-    # t4.join()
+    t3.join()
+    t4.join()
