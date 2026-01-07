@@ -7,7 +7,7 @@ semaphore = Semaphore(1)
 def sender(person_send, person_rec, msg):
     for i in msg:
         transmit(person_send, person_rec, i)
-        # sleep(1)
+        sleep(1)
     print(f"{person_send} finished sending message to {person_rec}")
 
 def transmit(person_send, person_rec, letter):
@@ -20,10 +20,10 @@ def transmit(person_send, person_rec, letter):
 
 def receiver(person_send, person_rec, letter):
     print(f"{person_rec} received: {letter} from {person_send}")
-    # sleep(1)
+    sleep(1)
 
 if __name__ == "__main__":
-    t1 = Thread(target=sender, args=("Alice", "Bob", "How"))
+    t1 = Thread(target=sender, args=("Alice", "Bob", "HELLO"))
     t2 = Thread(target=sender, args=("Charlie", "Dave", "WORLD"))
     # t3 = Thread(target=sender, args=("Eve", "Frank", "PYTHON"))
     # t4 = Thread(target=sender, args=("Grace", "Heidi", "THREADS"))
