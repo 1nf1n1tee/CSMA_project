@@ -60,7 +60,8 @@ The server will create a thread for each of the user. The only way I can think o
 
 But the OOP structure will be like this ig. 
 
-Class CSMA()--> send(reciever, msg) 
+Class CSMA()
+			--> send(reciever, msg) 
 					for each letter in msg:
 						*will trigger the transmit method*
 					
